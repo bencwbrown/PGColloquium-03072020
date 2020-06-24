@@ -1,0 +1,11 @@
+*.log
+*.out
+main.pdf
+*.nav
+.DS_Store
+*.gz
+*.aux
+*.pdf
+*.pdfpc
+*.snm
+*.toc
