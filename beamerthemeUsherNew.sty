@@ -69,10 +69,6 @@
   \begin{minipage}{.6\linewidth}
     \raggedright 
     {\usebeamerfont{title}\textcolor{white}\inserttitle\par~}
-  \ifx\insertsubtitle\@empty\else%
-  \\[1ex]
-  {\usebeamerfont{subtitle}\textcolor{white}\insertsubtitle}
-  \fi
   \\[3ex]
   {\usebeamerfont{author}\textcolor{white}\insertauthor}
   \ifx\insertinstitute\@empty\else%
@@ -95,9 +91,6 @@
   \end{picture}
    \else%
    \begin{picture}(25.4,19.05)(0,0)
-   \put(-.1, 0){\crule[\beamer@Usher@color]{25.4cm}{1cm}}
-   \put(.35, .35){\usebeamerfont{subtitle}\textcolor{white}\insertsubtitle}
-   \put(12.7, .1){\includegraphics[width=.8cm,height=.8cm]{edinburgh-logo}}
    \end{picture}
    \fi
 }
