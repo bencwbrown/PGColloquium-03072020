@@ -4,7 +4,7 @@
 %\usetheme[colour=USHERgreen]{UsherNew}
 %\usetheme[colour=USHERblue]{UsherNew}
 \usepackage{beamernotes}
-\usepackage{lipsum}
+\usepackage{amsmath}
 \pdfcompresslevel=9
 \pdfobjcompresslevel=3
 
@@ -24,18 +24,49 @@
 
 \begin{frame}[t]{Ellipses}
 	After circles, ellipses are the most familiar curves in mathematics.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=10cm]{st-patricks-square}
+		\caption{St Patrick's Square.}
+	\end{figure}
 \end{frame}
 
 \begin{frame}	
+	copy page over
 \end{frame}
 
-\begin{frame}	
+\begin{frame}[t]{Elliptic Functions}
+	Arc-length of an ellipse?
+\begin{equation*}
+	x = a\cos\theta,\quad y=b\sin\theta\quad \quad \quad 
+\end{equation*}
+	
+\begin{equation*}
+	\begin{split}
+		L &= \int_{0}^{2\pi} \sqrt{ ( \partial_{\theta}x )^{2} + ( \partial_{\theta}y )^{2} }\, d\theta \\
+		&= 4a \int_{0}^{1} \sqrt{ 1 - k^{2} u^{2} }\, du \quad (k^{2} = (a^{2} - b^{2})/a^{2};\quad u = \sin\theta ) \\
+		&= \frac{1}{2} \int_{1-k^{2}}^{1} \frac{t\, dt}{\sqrt{t(t-1)(t - (1-k^{2}))}}\quad (t = 1 - k^{2}u^{2})
+	\end{split}
+\end{equation*}	
 \end{frame}
 
 \begin{frame}
+	Integrals of the form
+	\begin{equation*}
+		\int \frac{t\, dt}{c_{3}t^{3} + c_{2}t^{2} + c_{1}t + c_{0}}
+	\end{equation*}
+	are called \emph{elliptic integrals (of the 2\textsuperscript{nd} kind)}.
+	
+	In general, elliptic functions have integrands have square roots of cubic or quartic polynomials. 
+	
+	Have no solution involving only elementary functions.
 \end{frame}
 
 \begin{frame}
+	Writing $y^{2} = x(x-1)\big( x - ( 1 - k^{2} )\big)$,
+	\begin{equation*}
+		L = \int \frac{t\, dt}{\sqrt{ x(x-1)(x - (1-k^{2}) ) }} = \int \frac{t\, dt}{\sqrt{y^{2}}}
+	\end{equation*}
 \end{frame}
 
 \begin{frame}
