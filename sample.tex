@@ -65,30 +65,33 @@
 \end{frame}
 
 \begin{frame}
-	Denominator is \emph{square-root} of:
+	Denominator is the \emph{square-root} of:
 	\begin{equation*}
-		y^{2} = x(x-1)(x-\lambda).
+		E: \quad y^{2} = x(x-1)(x-\lambda).
 	\end{equation*}
-	Over $\mathbb{C}$, it is the equation for a \emph{Legendre form} elliptic curve (if $\lambda \neq 0,1$ for distinct roots). \\~\\
+	Over $\mathbb{C}$, it is the equation for a \emph{Legendre form} elliptic curve. \\~\\
 	
-	Problem: there is no single-valued function $\sqrt{y}$ on the whole of $\mathbb{C}$. \\~\\
+	Problem: there is no single-valued function $y = \pm\sqrt{f(x)} = \pm\sqrt{x(x-1)(x-\lambda)}$ on the whole of $\mathbb{C}$. \\~\\
 	
-	Integrals $\int_{\infty}^{z}\tfrac{dt}{\sqrt{y}}$ are path-dependent.
+	$$
+		\pi : E \rightarrow \mathbb{C}\cup \{\infty\}; \qquad (x,y) \longmapsto x; \qquad \pi^{-1}(x) = \begin{cases}
+		\big\{ y = + \sqrt{f(x)} \big\}, \\
+		\big\{ y = - \sqrt{f(x)} \big\}.
+		\end{cases}
+	$$
+\end{frame}
+	
+\begin{frame}
+	To remedy this, note that away from $0, 1, \lambda, \infty$, square root $y = \sqrt{f(x)}$ has two single-valued determinations on $\mathbb{C} \cup \{\infty\}$. \\~\\
+	
+	Join them together via cuts from $0$ to $1$, and from $\lambda$ to $\infty$: \\~\\
+	
+	So we now have a surface (a torus) on which $\sqrt{f(x)}$ 
+	
+	
 \end{frame}
 
-\begin{frame}
-	Integrals $\int_{\infty}^{z}\tfrac{dt}{\sqrt{y}}$ are path-dependent. How to get around this? \\~\\
-	
-	Root ``branches'' $y = \pm \sqrt{x(x-1)(x-\lambda)}$ coincide at $x = 0,1,\lambda,$ and $\infty$.	
-\end{frame}
-
-\begin{frame}
-	$y = \pm \sqrt{x(x-1)(x-\lambda)}$ with branch points $x = 0,1,\lambda,\infty$. \\~\\
-	
-	Have one copy of $S^{2}$ for $|y|$, and another copy for $-|y|$. \\~\\
-	
-	We make cuts between $\infty \longleftrightarrow \lambda$ and $1 \longleftrightarrow 0$ on each $S^{2}$, and glue them together.
-	
+\begin{frame}	
 \end{frame}
 
 \begin{frame}
