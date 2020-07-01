@@ -53,26 +53,42 @@
 \begin{frame}
 	Integrals of the form
 	\begin{equation*}
-		\int \frac{t\, dt}{c_{3}t^{3} + c_{2}t^{2} + c_{1}t + c_{0}}
+		w = f(z) = \int_{P}^{z} \frac{t\, dt}{c_{3}t^{3} + c_{2}t^{2} + c_{1}t + c_{0}}
 	\end{equation*}
-	are called \emph{elliptic integrals (of the 2\textsuperscript{nd} kind)}.
+	are called \emph{elliptic integrals (of the 2\textsuperscript{nd} kind)}. \\~\\
 	
-	In general, elliptic functions have integrands involving square roots of cubic or quartic polynomials. 
+	In general, involve integrals with square-roots of cubic or quartic polynomials. \\~\\
 	
-	Have no solution involving only elementary functions.
+	\emph{Elliptic functions} are the inverses to elliptic integrals, $z = f^{-1}(w)$. \\~\\
+		
+	They have no solution involving only elementary functions.
 \end{frame}
 
 \begin{frame}
-	Writing $y^{2} = x(x-1)\big( x - ( 1 - k^{2} )\big)$,
+	Denominator is \emph{square-root} of:
 	\begin{equation*}
-		L = \int \frac{t\, dt}{\sqrt{ x(x-1)(x - (1-k^{2}) ) }} = \int \frac{t\, dt}{\sqrt{y^{2}}}
+		y^{2} = x(x-1)(x-\lambda).
 	\end{equation*}
+	Over $\mathbb{C}$, it is the equation for a \emph{Legendre form} elliptic curve (if $\lambda \neq 0,1$ for distinct roots). \\~\\
+	
+	Problem: there is no single-valued function $\sqrt{y}$ on the whole of $\mathbb{C}$. \\~\\
+	
+	Integrals $\int_{\infty}^{z}\tfrac{dt}{\sqrt{y}}$ are path-dependent.
 \end{frame}
 
 \begin{frame}
+	Integrals $\int_{\infty}^{z}\tfrac{dt}{\sqrt{y}}$ are path-dependent. How to get around this? \\~\\
+	
+	Root ``branches'' $y = \pm \sqrt{x(x-1)(x-\lambda)}$ coincide at $x = 0,1,\lambda,$ and $\infty$.	
 \end{frame}
 
 \begin{frame}
+	$y = \pm \sqrt{x(x-1)(x-\lambda)}$ with branch points $x = 0,1,\lambda,\infty$. \\~\\
+	
+	Have one copy of $S^{2}$ for $|y|$, and another copy for $-|y|$. \\~\\
+	
+	We make cuts between $\infty \longleftrightarrow \lambda$ and $1 \longleftrightarrow 0$ on each $S^{2}$, and glue them together.
+	
 \end{frame}
 
 \begin{frame}
