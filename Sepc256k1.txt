@@ -1,0 +1,41 @@
+\documentclass[10pt]{article}
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\definecolor{fuqqzz}{rgb}{0.9568627450980393,0,0.6}
+\definecolor{ccqqqq}{rgb}{0.8,0,0}
+\definecolor{ffzzqq}{rgb}{1,0.6,0}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\begin{axis}[
+x=1cm,y=1cm,
+axis lines=middle,
+xmin=-11.61,
+xmax=11.61,
+ymin=-18.219999999999857,
+ymax=18.219999999999857,
+xtick={-11,-10,...,11},
+ytick={-18,-17,...,18},]
+\clip(-11.61,-18.219999999999857) rectangle (11.61,18.219999999999857);
+
+%WARNING: PGF/Tikz and Gnuplot don't support implicit curves
+%Rather try PSTricks export
+%Cannot draw -7+1*y^2-1*x^3
+
+\draw [line width=2pt] (-1.9128894091751052,0.021414319149734493)-- (0.3062702866375786,2.6511749504707445);
+\draw [line width=1.2pt,dash pattern=on 1pt off 1pt] (0.3062702866375786,2.6511749504707445)-- (3.013032487739146,5.861178037963251);
+\draw [line width=1.2pt,dash pattern=on 1pt off 1pt] (3.013032487739146,5.861178037963251)-- (2.993669226931864,-5.816307211072785);
+\draw (-3.67,7.2) node[anchor=north west] {$y^{2} = x^{3} + 7$};
+\draw (-3.93,6.26) node[anchor=north west] {$\text{Sepc256k1 curve}$};
+\begin{scriptsize}
+\draw [fill=xdxdff] (-1.9128894091751052,0.021414319149734493) circle (2.5pt);
+\draw [fill=ffzzqq] (3.013032487739146,5.861178037963251) circle (2.5pt);
+\draw [fill=ccqqqq] (2.993669226931864,-5.816307211072785) circle (2.5pt);
+\draw [fill=fuqqzz] (0.3062702866375786,2.6511749504707445) circle (2.5pt);
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+\end{document}

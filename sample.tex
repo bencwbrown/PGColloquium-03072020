@@ -5,6 +5,10 @@
 %\usetheme[colour=USHERblue]{UsherNew}
 \usepackage{beamernotes}
 \usepackage{amsmath}
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
 \pdfcompresslevel=9
 \pdfobjcompresslevel=3
 
@@ -15,6 +19,11 @@
 \date{3\textsuperscript{rd} July 2020}
 
 \begin{document}
+
+\definecolor{fuqqzz}{rgb}{0.9568627450980393,0,0.6}
+\definecolor{ccqqqq}{rgb}{0.8,0,0}
+\definecolor{ffzzqq}{rgb}{1,0.6,0}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1}
 
 \begin{frame}
   \titlepage
@@ -92,6 +101,40 @@
 \end{frame}
 
 \begin{frame}	
+	(Figure)
+\end{frame}
+
+\begin{frame}
+	Have a map
+	$$
+		E(\mathbb{C}) \longrightarrow \mathbb{C}/(\omega_{1}\cdot \mathbb{Z} + \omega_{2}\cdot \mathbb{Z} ).
+	$$
+	Right-hand side is an abelian group, \emph{a torus}. \\~\\
+	
+	Does the elliptic curve $E(\mathbb{C})$ have an abelian group structure?
+\end{frame}
+
+\begin{frame}[t]{The Group Law}
+	Property of a cubic curve $E$: any line $L$ intersects $E$ in at most 3 points. \\~\\ 	
+	
+	Pick a marked point $\mathcal{O} \in E$ to serve as the identity (usually $\infty$ is chosen).
+\end{frame}
+
+\begin{frame}[t]{Point at Infinity}
+	``\emph{Homogenise}'' the equation:
+	$$
+		y^{2} = x(x-1)(x-\lambda) \longmapsto y^{2}z = x(x-z)(x-\lambda z).
+	$$
+	I.e., introduce powers of a new coordinate $z$ so every term has degree 3. \\~\\
+	
+	Point at infinity gotten from setting $z = 0$: $\infty \in \big\{ y^{2}\cdot 0 = x(x-0)(x-\lambda\cdot 0) \big\} \implies x = 0$.
+\end{frame}
+
+\begin{frame}
+	Point addition can be defined over any field. \\~\\
+	
+	A field is a ``nice'' ring. \emph{e.g.} $\mathbb{Q}, \mathbb{R}, \mathbb{C}$. These are \emph{infinite fields}. \\~\\
+
 \end{frame}
 
 \begin{frame}
@@ -104,6 +147,20 @@
 \end{frame}
 
 \begin{frame}
+\end{frame}
+
+\begin{frame}[t]{Another Form}
+	Legendre form only one of infinitely many forms for an EC. \\~\\
+
+	Another fun one is the \emph{Hesse cubic}: 
+	$$
+		f(x,y,z) = x^{3} + y^{3} + z^{3} - 3\lambda xyz = 0.
+	$$
+	Hessian curve 
+	$$
+		\det ( \partial^{2} f / \partial x_{i}x_{j} ) \propto f(x,y,z),
+	$$
+	and they intersect each other 9 times in general. 
 \end{frame}
 
 
