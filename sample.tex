@@ -130,11 +130,56 @@
 	Point at infinity gotten from setting $z = 0$: $\infty \in \big\{ y^{2}\cdot 0 = x(x-0)(x-\lambda\cdot 0) \big\} \implies x = 0$.
 \end{frame}
 
-\begin{frame}
+\begin{frame}{Finite Fields}
 	Point addition can be defined over any field. \\~\\
 	
-	A field is a ``nice'' ring. \emph{e.g.} $\mathbb{Q}, \mathbb{R}, \mathbb{C}$. These are \emph{infinite fields}. \\~\\
+	A field is a ``nice'' ring, \emph{e.g.} $\mathbb{Q}, \mathbb{R}, \mathbb{C}$. These are \emph{infinite fields}. \\~\\
+	
+	There are also \emph{finite fields}, say $\mathbb{Z}_{2}, \mathbb{Z}_{3},\ldots$. \\~\\
+	
+	In general $\mathbb{Z}_{p^{k}}$, with $p$ a prime number and $k\geq 1$, are all fields. \\~\\
 
+	In $\mathbb{Z}_{p}$ arithmetic is done modulo $p$. \\~\\
+	
+	E.g., time on a digital clock face is read modulo 24, so that $25:00 \equiv 01:00$, etc.
+\end{frame}
+
+\begin{frame}
+	Elliptic curves look very different over a finite field $\mathbb{F}_{p}$!	
+\end{frame}
+
+\begin{frame}[t]{Cryptography}
+	Cryptography is the process of writing using various methods, ciphers, to keep messages secret. \\~\\
+	
+	Example: Caesar Cipher (very insecure!) \\~\\
+	\begin{itemize}
+		\item Each letter in the message is shifted 3 letters along.
+		\item ``Decrypting elliptic curves'' $\mapsto$ ``Ghfubswlqj hoolswlf fxuyhv''.
+		\item To Decrypt, just undo the shift. \\~\\
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[t]{Diffie-Hellman Key Exchange}
+	A method of exchanging secret information over unsecure channels. \\~\\
+	
+	Alice and Bob each have a secret key, $a, b \in \mathbb{Z}$, and they agree on an elliptic curve $E$ and point $\mathcal{O}$. \\~\\
+	
+	Alice sends to Bob the point $a \cdot \mathcal{O}$, and Bob sends to Alice the point $b \cdot \mathcal{O}$ (these are public keys). \\~\\
+	
+	Alice then calculates $a \cdot b \cdot \mathcal{O}$, and likewise Bob calculates $b \cdot a \cdot \mathcal{O}$, which are equal as $E$ is an abelian groups. \\~\\
+	
+	So they now have a shared secret key $a \cdot b$
+\end{frame}
+
+\begin{frame}[t]{Discrete Logarithm Problem}
+	Someone observing this exchange would only know what $E$, $\mathcal{O}$, $a\cdot \mathcal{O}$, and $b\cdot \mathcal{O}$ are.
+	
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}
 \end{frame}
 
 \begin{frame}
